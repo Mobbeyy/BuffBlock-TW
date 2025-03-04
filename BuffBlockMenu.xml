@@ -27,7 +27,7 @@
 	<Frame name="BuffBlockOptions" toplevel="true" movable="true" parent="UIParent" enableMouse="true" hidden="true">
 		<TitleRegion setAllPoints="true"/>
 		<Size>
-			<AbsDimension x="225" y="295" />
+			<AbsDimension x="225" y="355" />
 		</Size>
 		<Anchors>
 			<Anchor point="CENTER" />
@@ -52,7 +52,7 @@
 			<Layer level="ARTWORK">
 				<Texture name="BuffBlockFrameTitle" file="Interface\DialogFrame\UI-DialogBox-Header">
 					<Size>
-						<AbsDimension x="276" y="64" />
+						<AbsDimension x="316" y="64" />
 					</Size>
 					<Anchors>
 						<Anchor point="TOP">
@@ -63,7 +63,7 @@
 					</Anchors>
 				</Texture>
 				
-				<FontString name="BuffBlockFrameTitleText" inherits="GameFontNormal" text="BuffBlock Menu">
+				<FontString name="BuffBlockFrameTitleText" inherits="GameFontNormal" text="Smart BuffBlock Menu">
 					<Anchors>
 						<Anchor point="TOP" relativeTo="BuffBlockOptions">
 							<Offset>
@@ -71,7 +71,69 @@
 							</Offset>
 						</Anchor>
 					</Anchors>
-				</FontString>				
+				</FontString>
+
+				<Texture name="SimpleFrame" parent="UIParent" inherits="DefaultPanelTemplate">
+					<Size>
+						<AbsDimension x="566" y="120" />
+					</Size>
+					<Anchors>
+						<Anchor point="TOP">
+							<Offset>
+								<AbsDimension x="0" y="142" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</Texture>
+				
+				<FontString name="BuffBlockFrameTitleText" inherits="GameFontNormal" wordwrap="true" text="Smart Tank Buff Blocking: Salvation and Hand of Protection auto removal">
+					<Anchors>
+						<Anchor point="TOP" relativeTo="BuffBlockOptions">
+							<Offset>
+								<AbsDimension x="0" y="120" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				
+				<FontString name="BuffBlockFrameTitleText" inherits="GameFontNormal" wordwrap="true" text="Warrior: Shield Equipped / Defensive Stance">
+					<Anchors>
+						<Anchor point="TOP" relativeTo="BuffBlockOptions">
+							<Offset>
+								<AbsDimension x="0" y="95" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				
+				<FontString name="BuffBlockFrameTitleText" inherits="GameFontNormal" wordwrap="true" text="Paladin: Righteous Fury Active">
+					<Anchors>
+						<Anchor point="TOP" relativeTo="BuffBlockOptions">
+							<Offset>
+								<AbsDimension x="0" y="80" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="BuffBlockFrameTitleText" inherits="GameFontNormal" wordwrap="true" text="Druid: Bear Form">
+					<Anchors>
+						<Anchor point="TOP" relativeTo="BuffBlockOptions">
+							<Offset>
+								<AbsDimension x="0" y="65" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="BuffBlockFrameTitleText" inherits="GameFontNormal" wordwrap="true" text="Shaman: Rockbiter Weapon Enchanted">
+					<Anchors>
+						<Anchor point="TOP" relativeTo="BuffBlockOptions">
+							<Offset>
+								<AbsDimension x="0" y="50" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				
 			</Layer>
 		</Layers>
 		
@@ -212,11 +274,46 @@
 					</OnClick>
 				</Scripts>
 			</CheckButton>
+			<CheckButton name="DivineShieldCheckbox" inherits="BuffBlockCheckboxTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="BlessingOfProtectionCheckbox">
+						<Offset>
+							<AbsDimension x="0" y="-25" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnShow>
+						BuffBlock_GetOption(08);
+					</OnShow>
+					<OnClick>
+						BuffBlock_SetOption(08);
+					</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="SmartTankingCheckbox" inherits="BuffBlockCheckboxTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="DivineShieldCheckbox">
+						<Offset>
+							<AbsDimension x="0" y="-25" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnShow>
+						BuffBlock_GetOption(09);
+					</OnShow>
+					<OnClick>
+						BuffBlock_SetOption(09);
+					</OnClick>
+				</Scripts>
+			</CheckButton>
+
 			<Button name="BuffBlockClose" inherits="GameMenuButtonTemplate" text="Close">
 				<Anchors>
 					<Anchor point="CENTER" relativePoint="BOTTOM" relativeTo="BuffBlockOptions">
 						<Offset>
-							<AbsDimension x="0" y="30" />
+							<AbsDimension x="0" y="25" />
 						</Offset>
 					</Anchor>
 				</Anchors>
@@ -226,43 +323,7 @@
 					</OnClick>
 				</Scripts>
 			</Button>
+
 		</Frames>
 	</Frame>
 </Ui>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
