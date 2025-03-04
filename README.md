@@ -5,6 +5,7 @@ BuffBlock removes selected beneficial buffs from the context menu as soon as the
 This also has the added advantage of preventing the Tank from reaching the beneficial buff limit (32).
 
 **Turtle WoW changes**
+
 Added each tanking class (Warrior/Druid/Paladin/Shaman)'s auto salvation and hand of protection removal tool.
 
 The original author of this addon is Armilus who published it at https://forum.nostalrius.org/viewtopic.php?f=63&t=19234
