@@ -26,7 +26,6 @@ Use /sbb or /buffblock in-game to access the context menu to enable/disable bene
 - Arcane Brilliance
 - Divine Shield
 - Blessing of Protection
-- Divine Shield
 
 **Notes**
 
