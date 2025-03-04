@@ -14,7 +14,7 @@ My efforts here have been to maintain the addon for use in raiding in Vanilla Wo
 
 **Usage**
 
-Use /sbb of /buffblock in-game to access the context menu to enable/disable beneficial buff blocking.
+Use /sbb or /buffblock in-game to access the context menu to enable/disable beneficial buff blocking.
 
 **Buff Options**  
 - Battle Shout
