@@ -10,7 +10,7 @@ My efforts here have been to maintain the addon for use in raiding in Vanilla Wo
 
 **Usage**
 
-Use /bb in-game to access the context menu to enable/disable beneficial buff blocking.
+Use /sbb of /buffblock in-game to access the context menu to enable/disable beneficial buff blocking.
 
 **Buff Options**  
 - Battle Shout
@@ -20,8 +20,13 @@ Use /bb in-game to access the context menu to enable/disable beneficial buff blo
 - Prayer of Spirit
 - Arcane Intellect
 - Arcane Brilliance
+- Divine Shield
 - Blessing of Protection
 
 **Notes**
 
-[Greater] Blessing of Salvation: This will be removed upon application only whilst wearing a Shield and in Defensive stance. 
+Smart Tank Buff Blocking: Salvation and Hand of Protection auto removal for each class
+- Warrior: Either with shield equipped and/or defensive stance
+- Druid: Bear or Dire Bear Form
+- Paladin: Righteous Fury Active
+- Shaman: with Rockbiter Weapon enchanted
