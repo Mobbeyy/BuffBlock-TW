@@ -190,19 +190,15 @@ function Kill_Buffs()
 			end
 		end
 		if BUFF_CONFIG[BB_PlayerName].SALVATION then
-			if (string.lower(UnitClass("player")) ~= "warrior" or (IsShieldEquipped() and GetShapeshiftFormInfo(2))) then
-				if (string.find(texture,"SealOfSalvation")) then
-					CancelPlayerBuff(buffIndex);
-					DEFAULT_CHAT_FRAME:AddMessage("Blocked "..BuffBlockMenuStrings[01], 1, 1, 0.5);
-				end
+			if (string.find(texture,"SealOfSalvation")) then
+				CancelPlayerBuff(buffIndex);
+				DEFAULT_CHAT_FRAME:AddMessage("Blocked "..BuffBlockMenuStrings[01], 1, 1, 0.5);
 			end
 		end
 		if BUFF_CONFIG[BB_PlayerName].GREATERSALVATION then
-			if (string.lower(UnitClass("player")) ~= "warrior" or (IsShieldEquipped() and GetShapeshiftFormInfo(2))) then
-				if (string.find(texture,"GreaterBlessingofSalvation")) then
-					CancelPlayerBuff(buffIndex);
-					DEFAULT_CHAT_FRAME:AddMessage("Blocked "..BuffBlockMenuStrings[02], 1, 1, 0.5);
-				end
+			if (string.find(texture,"GreaterBlessingofSalvation")) then
+				CancelPlayerBuff(buffIndex);
+				DEFAULT_CHAT_FRAME:AddMessage("Blocked "..BuffBlockMenuStrings[02], 1, 1, 0.5);
 			end
 		end
 		if BUFF_CONFIG[BB_PlayerName].DIVINESPIRIT then
