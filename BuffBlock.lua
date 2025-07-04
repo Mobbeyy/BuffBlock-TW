@@ -348,25 +348,15 @@ function IsBearForm()
 end
 
 function IsDefensiveStanceOn()
-    local buff = {"Ability_Warrior_DefensiveStance"}
-    local counter = 0
-    while GetPlayerBuff(counter) >= 0 do
-        local index, FindDS = GetPlayerBuff(counter)
-        if FindDS == 1 then
-            local texture = GetPlayerBuffTexture(index)
-            if texture then  -- Check if texture is not nil
-                local i = 1
-                while buff[i] do
-                    if string.find(texture, buff[i]) then
-                        return true
-                    end
-                    i = i + 1
-                end
-            end
-        end
-        counter = counter + 1
-    end
-    return false
+	local i;
+	local max = GetNumShapeshiftForms();
+	for i = 1 , max do
+		local _, name, isActive = GetShapeshiftFormInfo(i);
+		if(isActive and PlayerClass("Warrior", "player") and (name == "Defensive Stance")) then
+			return true
+		end
+	end
+	return false
 end
 
 SBBFrame = CreateFrame("Frame", nil, UIParent)
